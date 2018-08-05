@@ -1,15 +1,10 @@
 # Simple Lightbox
 
-This is a experimental lightbox plugin.
+This is a experimental lightbox plugin. Will automatically add a modal for `<ìmg>` tags, and you can navigate for each img as a gallery.
 
 ## Getting Started
 
-To use this plugin it is simple, you just need to import the js and make a instace of the object:
-
-
-down vote
-accepted
-Try putting your HTML snippet inside an ```HTML block like this:
+To use this plugin it is simple, you just need to import the js and make a instace of the object, like the examble bellow:
 
 ```html
 <script src="lightbox.js"></script>
@@ -18,36 +13,11 @@ Try putting your HTML snippet inside an ```HTML block like this:
 </script>
 ```
 
-### Prerequisites
+You can instance the object with true/false, default value is false.
 
-What things you need to install the software and how to install them
+if ```new Lightbox(false)```, you will have to add mannualy the attribute ``[data-lightbox]`` for each image tag that you want be a lightbox.
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+if ```new Lightbox(true)```, will automatically add all the `<img>` tags to lightbox.
 
 ## Versioning
 
