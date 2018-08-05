@@ -1,0 +1,59 @@
+// LightBox
+[data-app-lightbox] {
+	position: fixed;
+  top: 0;
+  display: flex;
+  background: rgba(0,0,0,0.7);
+  height: 100%;
+  width: 100%;
+  align-items: center;
+	justify-content: center;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+  transition: 0.25s;
+	cursor: pointer;
+	img {
+		width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
+	}
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
+	&:after {
+		content: "+";
+		position: absolute;
+		color: #FFF;
+		right: 20px;
+		top: 5px;
+		font-size: 36px;
+		transform: rotate(45deg);
+    }
+    [data-lightbox-arrow='left'],
+    [data-lightbox-arrow='right'] {
+      position: absolute;
+      font-size: 2rem;
+      color: #fff;
+      &.disable {
+        color: #757575;
+      }
+    }
+    [data-lightbox-arrow='left'] {
+      left: 20px;
+    }
+    [data-lightbox-arrow='right'] {
+      right: 20px;
+    }
+    [data-lightbox-arrow='left']:before {
+      content: "<";
+    }
+    [data-lightbox-arrow='right']:before {
+      content: ">";
+    }
+}
+[data-lightbox] {
+  cursor: pointer;
+}
